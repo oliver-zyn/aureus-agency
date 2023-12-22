@@ -1,59 +1,51 @@
+'use client'
+
+import { List, WhatsappLogo, X } from 'phosphor-react'
+
 import Link from 'next/link'
 import MaxWidthWrapper from './MaxWidthWrapper'
-import { WhatsappLogo } from 'phosphor-react'
+import NavLinks from './NavLinks'
+import WhatsAppButton from './WhatsAppButton'
 import { buttonVariants } from './ui/button'
+import { useState } from 'react'
 
 export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
   return (
     <nav className="sticky h-16 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
-        <div className="flex h-16 items-center justify-between border-zinc-200">
+        <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex z-40 font-semibold">
-            <span className="text-purple-aureus font-semibold">AureusAgency.</span>
+            <span className="text-purple-aureus font-bold">AureusAgency.</span>
           </Link>
 
-          {/* adicionar botao mobile */}
-
-          <div className="hidden items-center space-x-4 sm:flex">
-            <a
-              href="/"
+          <div className="sm:hidden">
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={buttonVariants({
                 variant: 'ghost',
-                size: 'sm',
+                className: 'focus:outline-none',
               })}
             >
-              Serviços
-            </a>
-            <a
-              href="/"
-              className={buttonVariants({
-                variant: 'ghost',
-                size: 'sm',
-              })}
-            >
-              Sobre
-            </a>
-            <a
-              href="/"
-              className={buttonVariants({
-                variant: 'ghost',
-                size: 'sm',
-              })}
-            >
-              Contato
-            </a>
-
+              {isMobileMenuOpen ? <X size={24} /> : <List size={24} />}
+            </button>
           </div>
-          <a
-            className={buttonVariants({
-              size: 'default',
-              className: 'bg-purple-aureus hover:bg-aureus/80 max-w-48 hover:bg-purple-aureus/80',
-            })}
-            href="https://wa.me/554691357970"
-            target="_blank"
-          >
-            Fale Conosco <WhatsappLogo weight="regular" className="ml-2 h-5 w-5" />
-          </a>
+
+          <div className="hidden sm:flex items-center space-x-4">
+            <NavLinks size="sm" />
+            <WhatsAppButton size="default" />
+          </div>
+
+          {isMobileMenuOpen ? (
+            <div className="flex animate-fadeIn sm:hidden flex-col justify-center gap-10 p-6 absolute inset-x-0 top-16 border-b border-gray-200 bg-white/95 backdrop-blur-lg transition-all">
+              <NavLinks size="lg" />
+              <WhatsAppButton size="lg" />
+            </div>
+          ) : (
+            ''
+          )}
         </div>
       </MaxWidthWrapper>
     </nav>

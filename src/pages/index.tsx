@@ -1,37 +1,42 @@
-import { ArrowRight } from "phosphor-react";
-import Image from "next/image";
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { buttonVariants } from "@/components/ui/button";
+import { ArrowRight } from 'phosphor-react'
+import Image from 'next/image'
+import MaxWidthWrapper from '@/components/MaxWidthWrapper'
+import { buttonVariants } from '@/components/ui/button'
 import estatuaImg from '../assets/rocketDraw.svg'
 
 export default function Home() {
   return (
     <>
-      <MaxWidthWrapper className="mt-28 sm:mt-40 flex items-center justify-between gap-24">
-        <div>
-          <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-6xl">
-            Decole sua presença digital, impulsione suas <span className="text-purple-aureus">vendas</span>
+      <MaxWidthWrapper className="mt-20 lg:mt-44 flex items-center justify-between gap-24">
+        <div className="flex flex-col items-center text-center lg:text-left lg:items-start gap-1">
+          <h1 className="max-w-4xl text-5xl font-bold lg:text-6xl">
+            Decole sua presença digital, impulsione suas{' '}
+            <span className="text-purple-aureus">vendas</span>
           </h1>
           <p className="mt-5 max-w-4xl text-zinc-700 sm:text-lg">
-            A <strong>Aureus Agency</strong> está aqui para elevar sua marca, alcançar novos patamares e conquistar o sucesso que você merece. Vamos voar juntos!
+            A <strong>Aureus Agency</strong> está aqui para elevar sua marca,
+            alcançar novos patamares e conquistar o sucesso que você merece.
+            Vamos voar juntos!
           </p>
           <a
             className={buttonVariants({
               size: 'lg',
-              className: 'mt-5 z-10 bg-purple-aureus hover:bg-purple-aureus/80 max-w-48',
+              className:
+                'mt-5 z-10 bg-purple-aureus hover:bg-purple-aureus/80 max-w-48',
             })}
             href="https://wa.me/554691357970"
             target="_blank"
+            rel="noreferrer"
           >
             Ver Serviços <ArrowRight weight="bold" className="ml-2 h-5 w-5" />
           </a>
         </div>
-        <div>
+        <div className="hidden lg:block">
           <Image src={estatuaImg} width={537} height={580} alt="" />
         </div>
       </MaxWidthWrapper>
 
-      {/* value proposition section */}
+      {/* Blur background */}
 
       <div>
         <div className="relative isolate">
@@ -62,6 +67,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className="h-[100vh]">asdsaads</div>
     </>
   )
 }
