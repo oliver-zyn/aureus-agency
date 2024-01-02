@@ -1,7 +1,7 @@
 import ArrowButton from './ArrowButton'
 import Image from 'next/image'
 import MaxWidthWrapper from './MaxWidthWrapper'
-import logoImg from '../assets/LOGO.jpg'
+import logoImg from '../assets/logo.jpg'
 
 export default function AboutSection() {
   return (
