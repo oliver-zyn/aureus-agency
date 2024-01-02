@@ -1,6 +1,6 @@
 'use client'
 
-import { List, WhatsappLogo, X } from 'phosphor-react'
+import { List, X } from 'phosphor-react'
 
 import Link from 'next/link'
 import MaxWidthWrapper from './MaxWidthWrapper'

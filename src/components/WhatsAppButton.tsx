@@ -10,8 +10,7 @@ export default function WhatsAppButton({ size }: WhatsAppButtonProps) {
     <a
       className={buttonVariants({
         size,
-        className:
-          'bg-purple-aureus hover:bg-aureus/80 hover:bg-purple-aureus/80',
+        className: 'bg-purple-aureus hover:bg-purple-aureus/80',
       })}
       href="https://wa.me/554691357970"
       target="_blank"

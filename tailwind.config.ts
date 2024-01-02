@@ -18,6 +18,7 @@ module.exports = {
     extend: {
       colors: {
         'purple-aureus': '#530082',
+        'white-aureus': '#FDFDFD',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

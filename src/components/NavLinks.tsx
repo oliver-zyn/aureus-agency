@@ -8,16 +8,7 @@ export default function NavLinks({ size }: NavLinksProps) {
   return (
     <>
       <a
-        href="/"
-        className={buttonVariants({
-          variant: 'ghost',
-          size,
-        })}
-      >
-        Serviços
-      </a>
-      <a
-        href="/"
+        href="#about"
         className={buttonVariants({
           variant: 'ghost',
           size,
@@ -26,7 +17,16 @@ export default function NavLinks({ size }: NavLinksProps) {
         Sobre
       </a>
       <a
-        href="/"
+        href="#services"
+        className={buttonVariants({
+          variant: 'ghost',
+          size,
+        })}
+      >
+        Serviços
+      </a>
+      <a
+        href="#contact"
         className={buttonVariants({
           variant: 'ghost',
           size,
