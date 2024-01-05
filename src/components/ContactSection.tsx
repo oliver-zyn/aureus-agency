@@ -1,15 +1,9 @@
-import {
-  FacebookLogo,
-  InstagramLogo,
-  TiktokLogo,
-  WhatsappLogo,
-} from 'phosphor-react'
+import { FacebookLogo, InstagramLogo, TiktokLogo } from 'phosphor-react'
 
 import IconLink from './IconLink'
 import Image from 'next/image'
 import MaxWidthWrapper from './MaxWidthWrapper'
 import WhatsAppButton from './WhatsAppButton'
-import { buttonVariants } from './ui/button'
 import contactImg from '../assets/contactDraw.svg'
 
 export default function ContactSection() {
