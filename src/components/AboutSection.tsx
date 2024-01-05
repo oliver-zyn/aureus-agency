@@ -5,7 +5,7 @@ import logoImg from '../assets/logo.jpg'
 
 export default function AboutSection() {
   return (
-    <MaxWidthWrapper className="flex justify-between items-center flex-col text-center gap-10 pt-40 lg:pt-60 lg:flex-row lg:text-left">
+    <MaxWidthWrapper className="flex justify-between items-center flex-col text-center gap-10 pt-60 lg:pt-80 lg:flex-row lg:text-left">
       <div>
         <h1 className="max-w-4xl text-3xl font-normal lg:text-4xl">
           Sobre a <span className="font-semibold">Aureus Agency</span>
@@ -25,6 +25,7 @@ export default function AboutSection() {
         </p>
         <ArrowButton
           text="Iniciar minha jornada"
+          target="_blank"
           url="https://wa.me/554691163405"
         />
       </div>

@@ -12,6 +12,10 @@ import { useState } from 'react'
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+  function closeMobileMenu() {
+    setIsMobileMenuOpen(false)
+  }
+
   return (
     <nav className="sticky h-16 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
@@ -34,14 +38,20 @@ export default function Navbar() {
           </div>
 
           <div className="hidden sm:flex items-center space-x-4">
-            <NavLinks size="sm" />
-            <WhatsAppButton size="default" />
+            <NavLinks size="sm" closeMobileMenu={closeMobileMenu} />
+            <WhatsAppButton
+              className="bg-purple-aureus hover:bg-purple-aureus/80"
+              size="default"
+            />
           </div>
 
           {isMobileMenuOpen ? (
             <div className="flex animate-fadeIn sm:hidden flex-col justify-center gap-10 p-6 absolute inset-x-0 top-16 border-b border-gray-200 bg-white/95 backdrop-blur-lg transition-all">
-              <NavLinks size="lg" />
-              <WhatsAppButton size="lg" />
+              <NavLinks size="lg" closeMobileMenu={closeMobileMenu} />
+              <WhatsAppButton
+                className="bg-purple-aureus hover:bg-purple-aureus/80"
+                size="lg"
+              />
             </div>
           ) : (
             ''

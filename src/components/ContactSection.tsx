@@ -8,12 +8,13 @@ import {
 import IconLink from './IconLink'
 import Image from 'next/image'
 import MaxWidthWrapper from './MaxWidthWrapper'
+import WhatsAppButton from './WhatsAppButton'
 import { buttonVariants } from './ui/button'
 import contactImg from '../assets/contactDraw.svg'
 
 export default function ContactSection() {
   return (
-    <MaxWidthWrapper className="pt-40 pb-40 lg:pt-60 lg:pb-60">
+    <MaxWidthWrapper className="py-60 lg:py-80">
       <div
         id="contact"
         className="flex justify-between items-center text-center gap-20 flex-col lg:text-left lg:flex-row"
@@ -34,18 +35,10 @@ export default function ContactSection() {
             para a sua marca. Estamos apenas a uma mensagem de distância!
           </p>
           <div className="flex items-center justify-center flex-col gap-5 mt-5 lg:flex-row lg:justify-start">
-            <a
-              className={buttonVariants({
-                size: 'lg',
-                className: 'bg-primary hover:bg-black/80 text-primary',
-              })}
-              href="https://wa.me/554691357970"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Entrar em contato{' '}
-              <WhatsappLogo weight="fill" className="ml-2 h-5 w-5" />
-            </a>
+            <WhatsAppButton
+              className="bg-white-aureus hover:bg-white-aureus/95 text-zinc-950"
+              size="lg"
+            />
             <div className="flex items-center gap-5">
               <IconLink
                 icon={<InstagramLogo size={28} />}

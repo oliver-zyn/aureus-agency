@@ -3,16 +3,20 @@ import { buttonVariants } from './ui/button'
 
 interface WhatsAppButtonProps {
   size: 'default' | 'sm' | 'lg' | 'icon' | null | undefined
+  className: string
 }
 
-export default function WhatsAppButton({ size }: WhatsAppButtonProps) {
+export default function WhatsAppButton({
+  size,
+  className,
+}: WhatsAppButtonProps) {
   return (
     <a
       className={buttonVariants({
         size,
-        className: 'bg-purple-aureus hover:bg-purple-aureus/80',
+        className,
       })}
-      href="https://wa.me/554691357970"
+      href="https://wa.me/554691163405"
       target="_blank"
       rel="noreferrer"
     >

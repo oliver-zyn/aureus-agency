@@ -19,6 +19,7 @@ module.exports = {
       colors: {
         'purple-aureus': '#530082',
         'white-aureus': '#FDFDFD',
+        'yellow-aureus': '#F2C464',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

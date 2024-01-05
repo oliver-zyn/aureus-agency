@@ -10,7 +10,7 @@ import MaxWidthWrapper from './MaxWidthWrapper'
 
 export default function FooterSection() {
   return (
-    <MaxWidthWrapper className="py-10 flex flex-col justify-between gap-5 items-center text-center lg:text-left lg:flex-row md:flex-row md:text-left">
+    <MaxWidthWrapper className="py-10 flex flex-col justify-between gap-5 items-center text-center lg:text-left lg:flex-row md:flex-row md:text-left mt-60 lg:mt-80">
       <div>
         <h2 className="font-semibold text-lg">AureusAgency.</h2>
         <p className="text-sm pt-2">
