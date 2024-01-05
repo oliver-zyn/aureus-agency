@@ -4,7 +4,7 @@
 
 ## 📖 Sobre
 
-Lading page criado para a agência de marketing digital Aureus Agency. A página apresenta agência, seus serviços e contatos.
+Lading page criado para a agência de marketing digital Aureus Agency. A página apresenta a agência, seus serviços e contatos.
 
 Foram feitas 3 versões: 
 - v1: https://aureus-agency.vercel.app
